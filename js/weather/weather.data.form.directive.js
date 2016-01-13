@@ -23,16 +23,16 @@
               console.log("Current wind speed(kph) in: "+ city +" "+ state +" "+ response.data.current_observation.wind_kph)
               $('#windResults').empty()
               $('#windResults').append("<h3>Current Wind Speed in: "+city+" "+state+" <span id='windSpeed'>"+response.data.current_observation.wind_kph+"</span> kph</h3>")
+
+              if($("#turbineDataForm"))
+              {
+                $("#turbineDataForm").css("visibility", 'visible')
+                $("#turbineSpecs").css("visibility", 'visible')
+              }
+
             })
           }
-          scope.toggleTurbineForm = function(){
-            if($("#turbineDataForm"))
-            {
-              $("#turbineDataForm").css("visibility", 'visible')
-              $("#turbineSpecs").css("visibility", 'visible')
-            }
 
-          }
         }
       }
     }

@@ -1,5 +1,11 @@
-<form id= "turbineDataForm">
-  <input type = 'text' name = "location" ng-model ="weather.towerHeight">Tower Height</input>
-  <input type = 'text' name = "location" ng-model ="weather.diameter">Blade Diameter</input>
+<form class = "form-inline" id= "turbineDataForm">
+  <div class = "form-group">
+    <label for="city">Tower Height (m): </label>
+    <input type = 'text' name = "location" ng-model ="weather.towerHeight" class='form-control'>
+  </div>
+  <div class = "form-group">
+  <label for="city">Blade Diameter (m): </label>
+  <input type = 'text' name = "location" ng-model ="weather.diameter" class='form-control'>
+  </div>
   <button ng-click = "getTurbineData()">Submit</button>
 </form>

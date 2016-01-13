@@ -26,12 +26,12 @@
           efficiency = .37
           radius = diameter/2
           sweptArea = Math.PI * Math.pow(radius,2)
-          rho = 1.1
+          rho = 1.225
           power = Math.floor((.5 * rho * sweptArea * Math.pow(correctedWindSpeed, 3) * efficiency))
           console.log("sweptArea: "+sweptArea)
           console.log(power+" W")
           $("#powerResults").empty()
-          $("#powerResults").append("</h2>Instantaneous Power estimate: "+ power + "W</h2>")
+          $("#powerResults").append("<h3>Instantaneous Power Estimate: "+ power + "W*</h3>")
         }
       }
     }

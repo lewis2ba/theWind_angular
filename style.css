@@ -1,3 +1,31 @@
 #turbineDataForm, #turbineSpecs{
   visibility: hidden;
 }
+
+.navbar{
+   margin-bottom:0px !important;
+ }
+ .navbar-default {
+   /*background-color: #3ce7a3;*/
+ }
+ .content{
+   margin: 20px;
+ }
+ .calculatorContent{
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ #title{
+   text-align: center;
+ }
+/*.images{
+  position: relative;
+}
+#hero{
+  position: relative;
+}
+#arrow{
+  position: absolute;
+  top: 500px;
+  right: 60%;
+}*/
