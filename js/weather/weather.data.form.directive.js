@@ -13,8 +13,8 @@
         link: function(scope){
           scope.getWeatherData = function(){
             console.log(this.weather)
-            city = this.weather.city
-            state = this.weather.state
+            var city = this.weather.city
+            var state = this.weather.state
             $http({
               method: "GET",
               url: 'http://api.wunderground.com/api/14da815aa9cb1bfe/conditions/q/' + state + '/' + city + '.json'
