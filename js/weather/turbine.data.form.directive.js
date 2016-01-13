@@ -29,9 +29,9 @@
           var windSpeedInKph = $('#windSpeed').text()
           var windSpeed = windSpeedInKph/3.6
           console.log("m/s: " + windSpeed)
-          var correctedWindSpeed = windSpeed*Math.pow((towerHeight/10),(0.142))
+          var correctedWindSpeed = windSpeed*Math.pow((towerHeight/10),(1/7))
           console.log("m/s: " + correctedWindSpeed)
-          var efficiency = .28
+          var efficiency = .3
           var radius = diameter/2
           var sweptArea = Math.PI * Math.pow(radius,2)
           var rho = 1.225
@@ -44,6 +44,15 @@
           $("#powerResults").empty()
           $("#powerResults").append("<h3>Instantaneous Power Estimate: "+ power + "W*</h3>")
           $("#powerResults").append("<h4>At a a constant wind speed of "+ windSpeedInKph + "kph a "+towerHeight+"m tall wind turbine with a blade diameter of "+diameter+"m could produce " + avgMthlyWindEnergy + " kWh of energy a month. Which is about " +percentGenerated+"% of an average American home's monthly usage.</h4>")
+          this.calculatePayback(avgMthlyWindEnergy)
+        },
+        scope.calculatePayback = function(energy){
+          console.log(energy)
+          var kWhCost = .15
+          var cost = 55000
+          var energy = energy*12
+          var paybackPeriod = cost/energy*kWhCost
+          console.log(paybackPeriod)
         }
       }
     }
