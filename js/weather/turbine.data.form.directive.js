@@ -16,14 +16,22 @@
           diameter = this.weather.diameter
           this.calculateWindPower(towerHeight, diameter)
         },
+        scope.getTurbineDataFromSelect = function(){
+          console.log(this.specs)
+          console.log(this)
+          specifications = JSON.parse(this.specs.toString())
+          console.log(specifications.diameter)
+          console.log(specifications.height)
+          this.calculateWindPower(specifications.height, specifications.diameter)
+        },
         scope.calculateWindPower = function(towerHeight, diameter){
           console.log(diameter)
           var windSpeedInKph = $('#windSpeed').text()
           var windSpeed = windSpeedInKph/3.6
           console.log("m/s: " + windSpeed)
-          var correctedWindSpeed = windSpeed*Math.pow((towerHeight/10),(0.2))
+          var correctedWindSpeed = windSpeed*Math.pow((towerHeight/10),(0.142))
           console.log("m/s: " + correctedWindSpeed)
-          var efficiency = .3
+          var efficiency = .28
           var radius = diameter/2
           var sweptArea = Math.PI * Math.pow(radius,2)
           var rho = 1.225
@@ -31,7 +39,7 @@
           console.log("sweptArea: "+sweptArea)
           console.log(power+" W")
           var avgMnthlyHomeEnergyUse = 911
-          var avgMthlyWindEnergy = (power * 24 * 31)/1000
+          var avgMthlyWindEnergy = (power * 24 * 30)/1000
           var percentGenerated = Math.floor(avgMthlyWindEnergy/avgMnthlyHomeEnergyUse*100)
           $("#powerResults").empty()
           $("#powerResults").append("<h3>Instantaneous Power Estimate: "+ power + "W*</h3>")

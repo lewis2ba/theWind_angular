@@ -8,4 +8,11 @@
   <input type = 'text' name = "location" ng-model ="weather.diameter" class='form-control'>
   </div>
   <button ng-click = "getTurbineDataFromForm()">Submit</button>
+  <h3>OR Select a Turbine</h3>
+  <select id = "turbineSelect" ng-model = "specs" ng-change = "getTurbineDataFromSelect()">
+    <option value = '{"height": "11",  "diameter":"3.8"}'>Kingspan 3kW Turbine (Height: 11m, Diameter: 3.8m)</option>
+    <option value = '{"height": "25",  "diameter":"7"}'>Bergey BWC Excel 10kW Turbine (Height: 25m, Diameter: 7m)</option>
+    <option value = '{"height": "80",  "diameter":"82.5"}'>GE 1.5MW Turbine (Height: 80m, Diameter: 82.5m)</option>
+    <option value = '{"height": "220",  "diameter":"164"}'>Vestas V164 8.0MW (Height: 220m, Diameter: 164m)</option>
+  </select>
 </form>
