@@ -43,7 +43,7 @@
           var percentGenerated = Math.floor(avgMthlyWindEnergy/avgMnthlyHomeEnergyUse*100)
           $("#powerResults").empty()
           $("#powerResults").append("<h3>Instantaneous Power Estimate: "+ power + "W*</h3>")
-          $("#powerResults").append("<h4>At a a constant wind speed of "+ windSpeedInKph + "kph a "+towerHeight+"m tall wind turbine with a blade diameter of "+diameter+"m could produce " + avgMthlyWindEnergy + " kWh of energy a month. Which is about " +percentGenerated+"% of an average American home's monthly usage.</h4>")
+          $("#powerResults").append("<h4 class ='powerResults'>At a a constant wind speed of "+ windSpeedInKph + "kph a "+towerHeight+"m tall wind turbine with a blade diameter of "+diameter+"m could produce " + avgMthlyWindEnergy + " kWh of energy a month. Which is about " +percentGenerated+"% of an average American home's monthly usage.</h4>")
           this.calculatePayback(avgMthlyWindEnergy)
         },
         scope.calculatePayback = function(energy){

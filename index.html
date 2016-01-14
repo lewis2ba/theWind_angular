@@ -3,16 +3,22 @@
   <head>
     <title>theWind</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
     <link rel = "stylesheet" href = 'style.css'>
 
     <script src="js/app.js"></script>
     <script src="js/weather/weather.js"></script>
     <script src="js/weather/index.controller.js"></script>
+    <script src="js/turbine/turbine.js"></script>
+    <script src="js/turbine/turbine.factory.js"></script>
+    <script src="js/turbine/index.controller.js"></script>
+    <script src="js/turbine/new.controller.js"></script>
 
     <script src="js/weather/weather.data.form.directive.js"></script>
     <script src="js/weather/turbine.data.form.directive.js"></script>
@@ -31,27 +37,18 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <!-- <li><a href="#"><span class="glyphicon glyphicon-send"> Wind Energy</a></li> -->
-          <li><a href="#"><span class="glyphicon glyphicon-tree-conifer"> Wind Power Calculator</a></li>
+          <li><a data-ui-sref="turbineIndex"><span class="glyphicon glyphicon-tree-conifer">Turbines</a></li>
+
+          <li><a href="/#/"><span class="glyphicon glyphicon-tree-conifer"> Wind Power Calculator</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div class = "images">
-    <img id = "hero" src = "img/windfarm.jpg" class="img-responsive" alt ="Wind Farm">
-    <!-- <img id = "arrow" src = "https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png" alt="Down Arrow"> -->
-  </div>
+
+
   <main data-ui-view></main>
   <div class="content">
-    <!--<h2 id='title'>Wind Power</h2>
-    <p> Wind power captures the natural wind in our atmosphere and converts it into mechanical energy then electricity. People started using wind power centuries ago with windmills, which pumped water, ground grain, and did other work. Today's wind turbine is a highly evolved version of a windmill. Modern wind turbines harness wind's kinetic energy and convert it into electricity. Most wind turbines have three blades and sit atop a steel tubular tower, and they range in size from 80-foot-tall turbines that can power a single home to utility-scale turbines that are over 260 feet tall and power hundreds of homes. </p>
 
-    <p>When wind blows past a turbine, the blades capture the energy and rotate. This rotation triggers an internal shaft to spin, which is connected to a gearbox increasing the speed of rotation, which is connect to a generator that ultimately produces electricity. Most commonly, wind turbines consist of a steel tubular tower, up to 325 feet, which supports both a "hub" securing wind turbine blades and the "nacelle" which houses the turbine's shaft, gearbox, generator and controls. A wind turbine is equipped with wind assessment equipment and will automatically rotate into the face of the wind, and angle or "pitch" its blades to optimize energy capture.
-    </p>
-    <p>The U.S. is blessed with a strong wind resource across the entire coutry. The current estimate of wind energy potential is 10 times the amount of electricity consumption for the entire country. This strong wind resource varies across the country by region and topography. By the end of 2014, America had nearly 48,000 operating wind turbines across 39 states as well as Puerto Rico representing 65,877 megawatts (MW). During 2014, the U.S. generated enough electricity from wind energy to power the equivalent of 16.7 million American homes, or all the residential households in Colorado, Idaho, Iowa, Illinois, Kansas, Minnesota, Montana, Nebraska, North Dakota, and South Dakota combined. The United States gets 4.4 percent of its electricity from wind overall, but certain states use much more. For instance, Iowa and South Dakota get more than 25 percent of their electricity from wind.</p>
-
-    <p>Wind energy is a clean, renewable form of energy that uses virtually no water and pumps billions of dollars into our economy every year. Since 2008, the U.S. wind industry has generated more than $100 billion in private investment. Furthermore, wind energy is a drought-resistant cash crop in many parts of the country, providing economic investment to rural communities through lease payments to landowners. Wind energy helps avoid a variety of environmental impacts due to its low impact emitting zero greenhouse gas emissions or conventional pollutants and consuming virtually no water.</p>
-    <h4>Use our Wind Power Calculator to estimate the instantaneous power a turbine would generate in any city in the U.S.</h4> -->
   </div>
   </body>
 </html>
