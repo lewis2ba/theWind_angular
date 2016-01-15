@@ -1,27 +1,31 @@
 <form class = "newForm">
   <div class = "form-group">
-    <label for="title">Title: </label>
-    <input type='text' name='title' ng-model='turbine.title' class="form-control">
+    <label for="title">Name: </label>
+    <input type='text' name='name' ng-model='TurbineNewViewModel.turbine.name' class="form-control">
   </div>
   <div class = "form-group">
-    <label for="height">Height: </label>
-    <input type='text' name='authorName' ng-model='turbine.height' class="form-control">
+    <label for="height">Height(m): </label>
+    <input type='text' name='tower_height' ng-model='TurbineNewViewModel.turbine.tower_height' class="form-control">
   </div>
   <div class = "form-group">
-    <label for="diameter">Diameter: </label>
-    <input type='text' name='authorName' ng-model='turbine.diameter' class="form-control">
+    <label for="diameter">Diameter(m): </label>
+    <input type='text' name='diameter' ng-model='TurbineNewViewModel.turbine.diameter' class="form-control">
+  </div>
+  <div class = "form-group">
+    <label for="diameter">Rated Capacity(kW): </label>
+    <input type='text' name='diameter' ng-model='TurbineNewViewModel.turbine.rated_capacity' class="form-control">
   </div>
   <div class = "form-group">
     <label for="city">Photo Url: </label>
-    <input type='text' name='photoUrl' ng-model='turbine.photoUrl' class="form-control">
+    <input type='text' name='photo_url' ng-model='TurbineNewViewModel.turbine.photo_url' class="form-control">
   </div>
   <div class = "form-group">
     <label for="city">City: </label>
-    <input type='text' name='photoUrl' ng-model='turbine.city' class="form-control">
+    <input type='text' name='city' ng-model='TurbineNewViewModel.turbine.city' class="form-control">
   </div>
   <div class = "form-group">
     <label for="city">State: </label>
-    <input type='text' name='photoUrl' ng-model='turbine.state' class="form-control">
+    <input type='text' name='state' ng-model='TurbineNewViewModel.turbine.state' class="form-control">
   </div>
-  <button class="btn btn-default" ng-click='create()'>New Turbine</button>
+  <button class="btn btn-default" ng-click='TurbineNewViewModel.create()'>New Turbine</button>
 </form>

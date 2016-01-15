@@ -1,12 +1,17 @@
-<a data-ui-sref = "turbineNew">Install a new turbine</a>
-<div class = 'turbinesContainer'>
-  <h2>Installed Turbines</h2>
-  <div class = 'turbine' data-ng-repeat="turbine in TurbineIndexViewModel.turbines">
-  <h5>Name: {{turbine.name}}</h5>
-  <h5>Height: {{turbine.tower_height}}</h5>
-  <h5>Blade Diameter: {{turbine.diameter}}</h5>
-  <h5>Rated Capacity: {{turbine.rated_capacity}}</h5>
-  <h5>Location: {{turbine.city}}, {{turbine.state}}</h5>
-  <img class = "turbinePhoto" src="{{turbine.photo_url}}" alt = "{{turbine.name}}">
+<div class = "turbineContent">
+  <div class="statisticsContainer">
+    <div id="turbineStatistics"></div>
+      <a id= "newTurbine" data-ui-sref = "turbineNew">Install a new turbine</a>
+    </div>
+  <div class = 'turbinesContainer'>
+    <h2>Installed Turbines</h2>
+    <div class = 'turbine' data-ng-repeat="turbine in TurbineIndexViewModel.turbines">
+    <h5>Name: {{turbine.name}}</h5>
+    <h5>Height: {{turbine.tower_height}}m</h5>
+    <h5>Blade Diameter: {{turbine.diameter}}m</h5>
+    <h5>Rated Capacity: {{turbine.rated_capacity}}kW</h5>
+    <h5>Location: {{turbine.city}}, {{turbine.state}}</h5>
+    <img class = "turbinePhoto" src="{{turbine.photo_url}}" alt = "{{turbine.name}}">
+    </div>
   </div>
 </div>
