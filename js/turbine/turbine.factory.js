@@ -9,7 +9,7 @@
     ])
 
   function FactoryFunction( $resource ){
-    return $resource( "http://localhost:3000/turbines/:id", {}, {
+    return $resource( "https://the-wind.herokuapp.com/turbines/:id", {}, {
       update: { method: "PUT" }
     });
   }
