@@ -5,9 +5,11 @@
   .module("turbine")
   .controller("TurbineIndexController",[
     "TurbineFactory",
+    "$stateParams",
    TurbineIndexControllerFunction])
 
-  function TurbineIndexControllerFunction(TurbineFactory){
+  function TurbineIndexControllerFunction(TurbineFactory, $stateParams){
+
     this.turbines = TurbineFactory.query()
     var totalCapacity = 0;
     this.turbines.$promise.then(function(turbines){

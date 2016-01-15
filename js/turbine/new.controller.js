@@ -18,5 +18,8 @@
             $state.go("turbineIndex")
           })
         }
+    this.destroy = function(){
+        this.turbine.$delete({id: $stateParams.id});
       }
+    }
 }())
