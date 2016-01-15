@@ -6,12 +6,17 @@
   .controller("TurbineNewController",[
     "TurbineFactory",
     "$stateParams",
+    "$state",
    TurbineNewControllerFunction])
 
-  function TurbineNewControllerFunction(TurbineFactory, $stateParams){
+  function TurbineNewControllerFunction(TurbineFactory, $stateParams, $state){
+    console.log("?!")
     this.turbine = new TurbineFactory();
-        this.create = function(){
-          this.turbine.$save()
+    console.log(this.turbine)
+    this.create = function(){
+          this.turbine.$save(function(){
+            $state.go("turbineIndex")
+          })
         }
-      }
+    }
 }())
